@@ -14,11 +14,25 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://js_mastery:123123123@practice.jto9p.mongodb.net/test';
-const PORT = process.env.PORT|| 5000;
+// const CONNECTION_URL = 'mongodb+srv://js_mastery:123123123@practice.jto9p.mongodb.net/test';
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
-  .catch((error) => console.log(`${error} did not connect`));
+/**
+ * MongoDB database user credentials
+ * mongodb+srv://AnantaDev:<password>@giridhari.9eah0.mongodb.net/<dbname>?retryWrites=true&w=majority
+ * uname: AnantaDev
+ * pwd: Giridhari_AnantaDev1
+*/
+const CONNECTION_URL = 'mongodb+srv://AnantaDev:Giridhari_AnantaDev1@giridhari.9eah0.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const PORT = process.env.PORT || 5000;
+
+mongoose.connect(CONNECTION_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+  .then(() => app.listen(PORT, () =>
+    console.log(`Server Running on Port: http://localhost:${PORT}`)
+  ))
+  .catch((error) =>
+    console.log(`${error} did not connect`));
 
 mongoose.set('useFindAndModify', false);
