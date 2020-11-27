@@ -1,0 +1,97 @@
+
+POST, PUT
+/user_details/<user_name>
+{
+
+  "user_blob":<users description ie users profile descrption>,
+  "user_picture_links": ["vrindavan/pic1","mountainview/pic2",....],
+  "profile_links": ["facebook_link","youtube_page_link","linkedinlink"]
+  "youtube_videos_links":["link1","link2"]
+
+}
+
+<json response is>
+{
+
+ "status":<status descrption goes here>
+}
+
+status code: 200, 401, 400
+-------------------------------
+
+GET
+/user_details/<user_name>
+
+<json response is>
+{
+
+  "user_blob":<users description ie users profile descrption>,
+  "user_picture_links": ["vrindavan/pic1","mountainview/pic2",....],
+  "profile_links": ["facebook_link","youtube_page_link","linkedinlink"]
+  "youtube_videos_links":["link1","link2"]
+
+}
+
+<json response is>
+{
+
+ "status":<status descrption goes here>
+}
+
+status code: 200, 401
+
+--------------------------------
+
+DELETE [Note: won't remove user login credentials, but user data like user blob, links, pictures]
+
+/user_details/<user_name>
+
+<json_return>
+{
+
+"status":<status descrption goes here>
+
+}
+
+status code: 200, 401
+
+--------------------------------
+
+
+POST
+/login/<user_name>
+{
+
+  "password":<password>
+
+}
+
+status code: 200, 401
+
+--------------------------------
+
+
+POST
+/change_password/<user_name>
+{
+  
+  "oldpassword":<password>
+  "newpassword":<password>
+}
+
+return:
+status code: 200, 401
+
+--------------------------------
+POST
+/logout/<user_name>
+{
+
+  "password":<password>
+
+}
+
+status code: 200, 401
+
+--------------------------------
+
