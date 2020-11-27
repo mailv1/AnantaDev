@@ -8,6 +8,8 @@ const Navbar = ()=>{
                 <ul>
                     <li><Link to='/home'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/vlogs'>Vlogs</Link></li>
+                    <li><Link to='/contact'>Contact</Link></li>
                     <li><Link to='/mongoForm'>MongoForm/AdminLogin</Link></li>
                 </ul>
             </div>

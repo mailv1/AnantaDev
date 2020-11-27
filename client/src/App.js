@@ -8,6 +8,7 @@ import About from './components/About'
 import MongoForm from './components/MongoForm'
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
+import Vlogs from './components/Vlogs'
 
 import { getPosts } from './actions/posts';
 import useStyles from './styles';
@@ -28,7 +29,9 @@ const App = () => {
       <Navbar />
       <Route path='/home' component={Home} />
       <Route path='/about' component={About} />
+      <Route path='/Vlogs' component={Vlogs} />
       <Route path='/mongoForm' component={MongoForm} />
+      
     </BrowserRouter>
 
   );
